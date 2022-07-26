@@ -17,6 +17,13 @@
                }
            }
        console.log(getComputerChoice());
+       function playRound(playerSelection, computerSelection){
+          return "You Lose! Paper beats Rock";
+       }
+       const playerSelection = RegExp("rock", "i");
+       const computerSelection = getComputerChoice();
+       console.log(playRound(playerSelection, computerSelection));
+       console.log(playerSelection.ignoreCase);
         </script>
     </body>
 </html>
