@@ -7,11 +7,20 @@
     <body>
         <script>
        function playRound(playerSelection, computerSelection){
-           if(playerSelection.toLowerCase() == 'rock' & computerSelection[computerPlay] == 'scissors' || playerSelection.toLowerCase() == 'paper' && computerSelection[computerPlay] == 'rock' || playerSelection.toLowerCase() == 'scissors' && computerSelection[computerPlay] == 'paper'){
+           if(playerSelection.toLowerCase() == 'rock' && computerSelection[computerPlay] == 'scissors' || playerSelection.toLowerCase() == 'paper' && computerSelection[computerPlay] == 'rock' || playerSelection.toLowerCase() == 'scissors' && computerSelection[computerPlay] == 'paper'){
                playerScore++;
                return win;
+           }else if(playerSelection.toLowerCase() == 'rock' && computerSelection[computerPlay] == 'paper' || playerSelection.toLowerCase() == 'paper' && computerSelection[computerPlay] == 'scissors' || playerSelection.toLowerCase() == 'scissors' && computerSelection[computerPlay] == 'rock'){
+               computerScore++;
+               return lose;
+           }else if(playerSelection.toLowerCase() == computerSelection[computerPlay]){
+               tieScore++;
+               return tie;
            }
        }
+       let playerSelection = prompt("Let's play a game of rock paper scissors");
+       console.log("You chose " + playerSelection.toLowerCase());
+       
         </script>
     </body>
 
