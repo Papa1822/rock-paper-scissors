@@ -20,7 +20,11 @@
        }
        let playerSelection = prompt("Let's play a game of rock paper scissors");
        console.log("You chose " + playerSelection.toLowerCase());
-       
+
+       let computerSelection = ["rock", "paper", "scissors"];
+       let computerPlay = Math.floor(Math.random() * computerSelection.length);
+       console.log("The computer chooses " + computerSelection[computerPlay]);
+
         </script>
     </body>
 
