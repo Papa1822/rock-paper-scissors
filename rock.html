@@ -50,6 +50,13 @@
                console.log(playRound(playerSelection, computerSelection));
 
            }
+           if(playerScore>computerScore){
+               return "You win this game.\n";
+           }else if(playerScore==computerScore){
+               return "This game is a tie.\n";
+           }else{
+               return "You lose this game.\n";
+           }
        }
 
         </script>
